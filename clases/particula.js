@@ -26,18 +26,9 @@ class Particula {
 			this.isAlive = false;
 		}
     }
-
-    display() {
-        // Colores neon
-        let neonColor = color(
-            sin(frameCount * 0.05) * 255,
-            sin(frameCount * 0.05 + PI / 3) * 255,
-            sin(frameCount * 0.05 + (2 * PI) / 3) * 255
-        );
-    
-        fill(neonColor);
-        stroke(255);
-        square(this.pos.x, this.pos.y, this.side);
-    }
-
+	display() {
+		fill(this.color);
+		stroke(255);
+		square(this.pos.x, this.pos.y, this.side);
+	}
 }
